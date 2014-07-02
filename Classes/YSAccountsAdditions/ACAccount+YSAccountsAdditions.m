@@ -19,4 +19,15 @@
     }
 }
 
++ (NSArray *)ys_userIDsForAccounts:(NSArray *)accounts
+{
+    NSMutableArray *ids = [NSMutableArray arrayWithCapacity:[accounts count]];
+    for (ACAccount *account in accounts) {
+        if ([account isKindOfClass:[ACAccount class]]) {
+            [ids addObject:[account ys_twitterUserId]];
+        }
+    }
+    return [NSArray arrayWithArray:ids];
+}
+
 @end
