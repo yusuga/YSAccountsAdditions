@@ -10,7 +10,7 @@
 
 @implementation ACAccount (YSAccountsAdditions)
 
-- (NSString*)ys_twitterUserId
+- (NSString*)ys_twitterUserID
 {
     if ([self.accountType.identifier isEqualToString:ACAccountTypeIdentifierTwitter]) {
         return [self valueForKeyPath:@"properties.user_id"];
@@ -24,7 +24,7 @@
     NSMutableArray *ids = [NSMutableArray arrayWithCapacity:[accounts count]];
     for (ACAccount *account in accounts) {
         if ([account isKindOfClass:[ACAccount class]]) {
-            [ids addObject:[account ys_twitterUserId]];
+            [ids addObject:[account ys_twitterUserID]];
         }
     }
     return [NSArray arrayWithArray:ids];

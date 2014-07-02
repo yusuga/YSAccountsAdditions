@@ -10,7 +10,7 @@
 
 @interface ACAccount (YSAccountsAdditions)
 
-- (NSString*)ys_twitterUserId;
+- (NSString*)ys_twitterUserID;
 + (NSArray*)ys_userIDsForAccounts:(NSArray*)accounts;
 
 @end
