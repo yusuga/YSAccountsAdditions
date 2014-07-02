@@ -29,17 +29,35 @@
     [super tearDown];
 }
 
-- (void)testTwitterUserId
+- (void)testTwitterUserID
 {
     [[YSAccountStore shardStore] requestAccessToTwitterAccountsWithCompletion:^(NSArray *accounts, NSError *error) {
-        if (error) {
-            XCTAssert(0, @"error: %@", error);
-            return ;
-        }
+        XCTAssertNil(error, @"error: %@", error);
+        XCTAssertNotNil(accounts);
+        XCTAssertTrue([accounts count] > 0);
+        
         for (ACAccount *account in accounts) {
-            NSLog(@"account user id: %@", [account ys_twitterUserId]);
-            XCTAssertNotNil([account ys_twitterUserId]);
+            XCTAssertNotNil([account ys_twitterUserID]);
         }
+        RESUME;
+    }];
+    WAIT;
+}
+
+- (void)testUserIDs
+{
+    [[YSAccountStore shardStore] requestAccessToTwitterAccountsWithCompletion:^(NSArray *accounts, NSError *error) {
+        XCTAssertNil(error, @"error: %@", error);
+        XCTAssertNotNil(accounts);
+        XCTAssertTrue([accounts count] > 0);
+        
+        NSArray *ids = [ACAccount ys_userIDsForAccounts:accounts];
+        XCTAssertEqual([ids count], [accounts count], @"ids: %zd, accounts: %zd", [ids count], [accounts count]);
+        
+        [accounts enumerateObjectsUsingBlock:^(ACAccount *account, NSUInteger idx, BOOL *stop) {
+            NSString *userID = ids[idx];
+            XCTAssertEqual(userID, [account ys_twitterUserID], @"userID: %@, accountID: %@", userID, [account ys_twitterUserID]);
+        }];
         RESUME;
     }];
     WAIT;
