@@ -5,5 +5,4 @@ target "YSAccountsAdditionsExample" do
 end
 
 target "YSAccountsAdditionsExampleTests" do
-  pod 'TKRGuard'
 end

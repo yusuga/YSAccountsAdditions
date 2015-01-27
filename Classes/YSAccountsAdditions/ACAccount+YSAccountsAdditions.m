@@ -10,6 +10,8 @@
 
 @implementation ACAccount (YSAccountsAdditions)
 
+/* ID */
+
 - (NSString*)ys_twitterUserID
 {
     if ([self.accountType.identifier isEqualToString:ACAccountTypeIdentifierTwitter]) {
@@ -28,6 +30,35 @@
         }
     }
     return [NSArray arrayWithArray:ids];
+}
+
+#pragma mark - Comparing
+
+- (BOOL)ys_isEqualToAccount:(ACAccount*)account
+{
+    return [[self ys_twitterUserID] isEqualToString:[account ys_twitterUserID]];
+}
+
++ (BOOL)ys_isEqualAccounts:(NSArray*)accounts1
+                toAccounts:(NSArray*)accounts2
+{
+    if ([accounts1 count] != [accounts2 count]) {
+        return NO;
+    }
+    
+    for (ACAccount *acnt1 in accounts1) {
+        BOOL isContains = NO;
+        for (ACAccount *acnt2 in accounts2) {
+            if ([acnt1 ys_isEqualToAccount:acnt2]) {
+                isContains = YES;
+                break;
+            }
+        }
+        if (!isContains) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 @end
