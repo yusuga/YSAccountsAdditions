@@ -174,6 +174,13 @@
         
         XCTAssertTrue([ACAccount ys_isEqualAccounts:accounts1 toAccounts:accounts2]);
         
+        NSMutableArray *accounts3 = @[].mutableCopy;
+        for (id obj in accounts2) {
+            [accounts3 insertObject:obj atIndex:0];
+        }
+        
+        XCTAssertTrue([ACAccount ys_isEqualAccounts:accounts1 toAccounts:accounts3]);
+        
         [expectation fulfill];
     }];
     [self waitForExpectationsWithTimeout:10. handler:^(NSError *error) {

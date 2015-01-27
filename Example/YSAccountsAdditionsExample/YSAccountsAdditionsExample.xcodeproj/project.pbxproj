@@ -10,21 +10,7 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>0AA72967A7D040E1968D7C5D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3646F987EA5D42B9B8BE5D5E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1DE1F55CAC9F4AAB82493D5E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DA8D9A473FF14AB8A4BFFB92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2250C7927A564AA3AF4BE39D</key>
+		<key>703A5C0B49394B1F38DF0B50</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -43,85 +29,12 @@
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-YSAccountsAdditionsExample-resources.sh"
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
-		<key>3646F987EA5D42B9B8BE5D5E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-YSAccountsAdditionsExample.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>45F7D69F58FD4B189BA7323B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5CB4E94BDDD84F54A8DF0A73</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>81C979C65C1D419BAD52A9EC</key>
+		<key>800D2B83E2B673664B5E2D5A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -130,13 +43,28 @@ fi
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>name</key>
-			<string>Pods-YSAccountsAdditionsExampleTests.xcconfig</string>
+			<string>Pods.release.xcconfig</string>
 			<key>path</key>
-			<string>Pods/Pods-YSAccountsAdditionsExampleTests.xcconfig</string>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9329959F2D6D4EB2A1E51EDD</key>
+		<key>975856DC25CEDB6C827E501D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3882A30F7AACD443FCB70C7</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -147,7 +75,7 @@ fi
 			<key>isa</key>
 			<string>PBXShellScriptBuildPhase</string>
 			<key>name</key>
-			<string>Copy Pods Resources</string>
+			<string>Check Pods Manifest.lock</string>
 			<key>outputPaths</key>
 			<array/>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -155,7 +83,13 @@ fi
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-YSAccountsAdditionsExampleTests-resources.sh"
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
@@ -169,8 +103,7 @@ fi
 				<string>B8CA1D5E1915D11700801128</string>
 				<string>B8CA1D381915D11700801128</string>
 				<string>B8CA1D371915D11700801128</string>
-				<string>F013F88C57D94FD3A71C47F9</string>
-				<string>81C979C65C1D419BAD52A9EC</string>
+				<string>DB830EC48A6B90AB3BAD698D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -264,7 +197,7 @@ fi
 				<string>B8CA1D3C1915D11700801128</string>
 				<string>B8CA1D3E1915D11700801128</string>
 				<string>B8CA1D3A1915D11700801128</string>
-				<string>0AA72967A7D040E1968D7C5D</string>
+				<string>CB92C95786DF89E9EC2BBFF1</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -292,11 +225,11 @@ fi
 			<string>B8CA1D681915D11700801128</string>
 			<key>buildPhases</key>
 			<array>
-				<string>5CB4E94BDDD84F54A8DF0A73</string>
+				<string>B3882A30F7AACD443FCB70C7</string>
 				<string>B8CA1D321915D11700801128</string>
 				<string>B8CA1D331915D11700801128</string>
 				<string>B8CA1D341915D11700801128</string>
-				<string>2250C7927A564AA3AF4BE39D</string>
+				<string>703A5C0B49394B1F38DF0B50</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -348,8 +281,7 @@ fi
 				<string>B8CA1D3B1915D11700801128</string>
 				<string>B8CA1D3D1915D11700801128</string>
 				<string>B8CA1D581915D11700801128</string>
-				<string>3646F987EA5D42B9B8BE5D5E</string>
-				<string>DA8D9A473FF14AB8A4BFFB92</string>
+				<string>E794FE77590AC31795FD96BD</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -657,7 +589,6 @@ fi
 				<string>B8CA1D591915D11700801128</string>
 				<string>B8CA1D5B1915D11700801128</string>
 				<string>B8CA1D5A1915D11700801128</string>
-				<string>1DE1F55CAC9F4AAB82493D5E</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -683,11 +614,9 @@ fi
 			<string>B8CA1D6B1915D11700801128</string>
 			<key>buildPhases</key>
 			<array>
-				<string>45F7D69F58FD4B189BA7323B</string>
 				<string>B8CA1D531915D11700801128</string>
 				<string>B8CA1D541915D11700801128</string>
 				<string>B8CA1D551915D11700801128</string>
-				<string>9329959F2D6D4EB2A1E51EDD</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -989,13 +918,15 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>B8CA1D691915D11700801128</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>F013F88C57D94FD3A71C47F9</string>
+			<string>975856DC25CEDB6C827E501D</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -1021,7 +952,7 @@ fi
 		<key>B8CA1D6A1915D11700801128</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>F013F88C57D94FD3A71C47F9</string>
+			<string>800D2B83E2B673664B5E2D5A</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -1053,13 +984,13 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>B8CA1D6C1915D11700801128</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>81C979C65C1D419BAD52A9EC</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1079,6 +1010,12 @@ fi
 					<string>DEBUG=1</string>
 					<string>$(inherited)</string>
 				</array>
+				<key>HEADER_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
+					<string>${SRCROOT}/Pods/Headers/**</string>
+				</array>
 				<key>INFOPLIST_FILE</key>
 				<string>YSAccountsAdditionsExampleTests/YSAccountsAdditionsExampleTests-Info.plist</string>
 				<key>PRODUCT_NAME</key>
@@ -1095,8 +1032,6 @@ fi
 		</dict>
 		<key>B8CA1D6D1915D11700801128</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>81C979C65C1D419BAD52A9EC</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1111,6 +1046,12 @@ fi
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
 				<string>YSAccountsAdditionsExample/YSAccountsAdditionsExample-Prefix.pch</string>
+				<key>HEADER_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
+					<string>${SRCROOT}/Pods/Headers/**</string>
+				</array>
 				<key>INFOPLIST_FILE</key>
 				<string>YSAccountsAdditionsExampleTests/YSAccountsAdditionsExampleTests-Info.plist</string>
 				<key>PRODUCT_NAME</key>
@@ -1194,7 +1135,28 @@ fi
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>DA8D9A473FF14AB8A4BFFB92</key>
+		<key>CB92C95786DF89E9EC2BBFF1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E794FE77590AC31795FD96BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DB830EC48A6B90AB3BAD698D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>975856DC25CEDB6C827E501D</string>
+				<string>800D2B83E2B673664B5E2D5A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E794FE77590AC31795FD96BD</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -1203,24 +1165,9 @@ fi
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>libPods-YSAccountsAdditionsExampleTests.a</string>
+			<string>libPods.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F013F88C57D94FD3A71C47F9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-YSAccountsAdditionsExample.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-YSAccountsAdditionsExample.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

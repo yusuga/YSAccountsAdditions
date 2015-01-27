@@ -1,8 +1,2 @@
 platform :ios, "7.0"
-
-target "YSAccountsAdditionsExample" do
-  pod 'YSAccountStore'
-end
-
-target "YSAccountsAdditionsExampleTests" do
-end
+pod 'YSAccountStore'
