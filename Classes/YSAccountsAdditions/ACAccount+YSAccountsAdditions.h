@@ -12,7 +12,9 @@
 
 /* ID */
 
-- (NSString*)ys_twitterUserID;
+- (int64_t)ys_twitterUserID;
+- (NSNumber*)ys_twitterUserIDNumber;
+- (NSString*)ys_twitterUserIDString;
 + (NSArray*)ys_userIDsForAccounts:(NSArray*)accounts;
 
 /* Comparing */

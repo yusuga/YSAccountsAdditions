@@ -12,7 +12,17 @@
 
 /* ID */
 
-- (NSString*)ys_twitterUserID
+- (int64_t)ys_twitterUserID
+{
+    return [self ys_twitterUserIDString].longLongValue;
+}
+
+- (NSNumber*)ys_twitterUserIDNumber
+{
+    return @([self ys_twitterUserID]);
+}
+
+- (NSString*)ys_twitterUserIDString
 {
     if ([self.accountType.identifier isEqualToString:ACAccountTypeIdentifierTwitter]) {
         return [self valueForKeyPath:@"properties.user_id"];
@@ -26,7 +36,7 @@
     NSMutableArray *ids = [NSMutableArray arrayWithCapacity:[accounts count]];
     for (ACAccount *account in accounts) {
         if ([account isKindOfClass:[ACAccount class]]) {
-            [ids addObject:[account ys_twitterUserID]];
+            [ids addObject:[account ys_twitterUserIDNumber]];
         }
     }
     return [NSArray arrayWithArray:ids];
@@ -36,7 +46,7 @@
 
 - (BOOL)ys_isEqualToAccount:(ACAccount*)account
 {
-    return [[self ys_twitterUserID] isEqualToString:[account ys_twitterUserID]];
+    return [[self ys_twitterUserIDString] isEqualToString:[account ys_twitterUserIDString]];
 }
 
 + (BOOL)ys_isEqualAccounts:(NSArray*)accounts1

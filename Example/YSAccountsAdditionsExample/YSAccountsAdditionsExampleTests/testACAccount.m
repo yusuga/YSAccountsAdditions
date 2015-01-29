@@ -34,9 +34,17 @@
         XCTAssertGreaterThan([accounts count], 0);
         
         for (ACAccount *account in accounts) {
-            id userID = [account ys_twitterUserID];
-            XCTAssertNotNil([account ys_twitterUserID]);
-            XCTAssertTrue([userID isKindOfClass:[NSString class]], @"class: %@", NSStringFromClass([userID class]));
+            int64_t userID = [account ys_twitterUserID];
+            XCTAssertGreaterThan(userID, 0);
+            
+            NSString *userIDStr = [account ys_twitterUserIDString];
+            XCTAssertTrue([userIDStr isKindOfClass:[NSString class]]);
+            
+            NSNumber *userIDNum = [account ys_twitterUserIDNumber];
+            XCTAssertTrue([userIDNum isKindOfClass:[NSNumber class]]);
+            
+            XCTAssertEqual(userID, userIDStr.longLongValue);
+            XCTAssertEqual(userID, userIDNum.longLongValue);
         }
         [expectation fulfill];
     }];
@@ -56,8 +64,8 @@
         XCTAssertEqual([ids count], [accounts count]);
         
         [accounts enumerateObjectsUsingBlock:^(ACAccount *account, NSUInteger idx, BOOL *stop) {
-            NSString *userID = ids[idx];
-            XCTAssertEqualObjects(userID, [account ys_twitterUserID]);
+            NSNumber *userID = ids[idx];
+            XCTAssertEqualObjects(userID, [account ys_twitterUserIDNumber]);
         }];
         [expectation fulfill];
     }];
